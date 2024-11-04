@@ -3,26 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="style.css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"
-    ></script>
+    <title>My Portfolio</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
   </head>
   <body>
-    <h1>Contact Us</h1>
-    <form id="contact-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required /><br /><br />
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required /><br /><br />
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" required /><br /><br />
-      <label for="message">Message:</label><br />
-      <textarea id="message" name="message" required></textarea><br /><br />
-      <button type="submit">Send Message</button>
-    </form>
-    <script src="script.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="hero bg-primary text-white text-center py-5">
+      <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <a href="#projects" class="btn btn-light btn-lg">View My Work</a>
+      </div>
+    </header>
+
+    <section id="about" class="py-5 text-center">
+      <div class="container">
+        <h2>About Me</h2>
+        <p class="lead">
+          Im Richard Agbonisa 19 yrs old, i live in Prk Bautista Tubod Iligan
+          City
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center">Projects</h2>
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="code.jpg" class="card-img-top" alt="Project 1" />
+              <div class="card-body">
+                <h5 class="card-title">Project 1</h5>
+
+                <a href="#" class="btn btn-primary">View Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="project2.jpg" class="card-img-top" alt="Project 2" />
+              <div class="card-body">
+                <h5 class="card-title">Project 2</h5>
+                <a href="#" class="btn btn-primary">View Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="img2.png" class="card-img-top" alt="Project 3" />
+              <div class="card-body">
+                <h5 class="card-title">Project 3</h5>
+                <a href="#" class="btn btn-primary">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5 text-center">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p class="lead mt-3">
+          Feel free to reach out to me for any inquiries or collaboration
+          opportunities.
+        </p>
+        <p>
+          Email:
+          <a href="https://www.facebook.com/richard.agbonisa28"
+            >richardagbonisa28@gmail.com</a
+          >
+        </p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/jobs/">linkedin.com</a>
+        </p>
+        <p>
+          Gmail:
+          <a href="https://mail.google.com/mail/u/0/#inbox"
+            >richardagbonisa202300406</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <footer class="bg-light text-center py-4">
+      <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
